@@ -118,7 +118,11 @@
     font-size: 0.8rem;
 }
 
-.timestamp {
+.tag-description {
+    font-size: 0.8rem;
+}
+
+.info-text {
     display: inline-block;
     font-size: 0.8rem;
     color: #444;
@@ -168,6 +172,10 @@
     border-radius: 8px;
 }
 
+.input-filter-tag {
+    max-width: 30rem;
+}
+
 .info-box-text {
     color: #444;
     padding: 0;
@@ -197,6 +205,10 @@ main {
 @media (max-width: 992px) {
     .content-grid {
         grid-template-columns: auto;
+    }
+
+    .input-filter-tag {
+        max-width: auto;
     }
 
     .sidebar {
@@ -238,5 +250,11 @@ main {
     .maxw-75perc {
         margin-top: 0.5rem;
         width: 100%;
+    }
+}
+
+@media (max-width: 350px){
+    .filter-tag-btn-label {
+        display: none;
     }
 }
