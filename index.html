@@ -1,11 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Otávio Folador</title>
+
+    <style>
+        :root {
+            font-size: 1.2rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+
+        .container {
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+
+        .list {
+            display: grid;
+            grid-template-columns: 1fr;
+            padding: 0;
+            margin: 0;
+        }
+
+        .list li {
+            list-style-type: none;
+            width: 100%;
+            margin: 0.5rem 0;
+            padding: 0;
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            text-align: center;
+            padding: 1rem 2rem;
+            background-color: #f3f3f3;
+
+            transition: all 0.2s ;
+        }
+
+        a:hover {
+            background-color: blueviolet;
+            color: white;
+        }
+
+        .profile-img {
+            max-width: 200px;
+            border-radius: 1rem;
+            object-fit: cover;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 0 0.5rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="container">
+        <header>
+            <img src="./me.jpg" alt="OkeLDF" class="profile-img">
+            <h1 style="display: inline-block;">OkeLDF</h1>
+        </header>
+
+        <ul class="list">
+            <li>
+                <a href="./matematica/index.html">Matemática</a>
+            </li>
+            <li>
+                <a href="./stackoverflow/index.html">Stack Overflow</a>
+            </li>
+        </ul>
+    </div>
 </body>
+
 </html>
