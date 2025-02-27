@@ -4,21 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Piano Playing</title>
+    <title>Piano</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap');
-
         body {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: &quot;
-            Poppins&quot;
-            ,
-            sans-serif;
+            font-family: sans-serif;
         }
 
         .container {
+            margin: auto auto;
             width: fit-content;
             background-color: crimson;
             display: flex;
@@ -32,6 +28,7 @@
             align-items: center;
             justify-content: center;
         }
+
         ul {
             padding: 1rem;
             margin: 0;
@@ -54,6 +51,7 @@
 
         .white-key {
             background-color: #fff;
+            display: inline-block;
         }
 
         .black-key {
@@ -67,99 +65,65 @@
             margin: 0 -20px 0 -20px;
         }
 
-        @media screen and (min-width: 821px) and (max-width: 1024px) {
-            .piano-keys {
-                width: 4rem;
-                cursor: pointer;
-                position: relative;
-                height: 20rem;
-                border-radius: 10px;
-                border: 1px solid #000;
+        @media screen and (max-width: 650px) {
+            body {
+                background-color: aqua;
             }
 
-            .black-key {
-                width: 2rem;
+            .piano-keys {
                 height: 13rem;
-                border-radius: 5px;
-                border-top-left-radius: 0;
-                border-top-right-radius: 0;
-                background-color: #000;
-                z-index: 2;
-                margin: 0 -20px 0 -20px;
-            }
-        }
-
-        @media screen and (min-width: 768px) and (max-width: 820px) {
-            .piano-keys {
                 width: 3.5rem;
-                cursor: pointer;
-                position: relative;
-                height: 16rem;
-                border-radius: 10px;
-                border: 1px solid #000;
             }
 
             .black-key {
-                width: 1.8rem;
-                height: 10rem;
-                border-radius: 5px;
-                border-top-left-radius: 0;
-                border-top-right-radius: 0;
-                background-color: #000;
-                z-index: 2;
-                margin: 0 -20px 0 -20px;
+                height: 8rem;
+                width: 1.6rem;
             }
         }
 
-        @media screen and (max-width: 576px) {
-            .piano-container {
-                width: 90%;
-                display: flex;
-                align-items: center;
-                justify-content: flex-start;
-                overflow: auto;
+        @media screen and (max-width: 450px) {
+            body {
+                background-color: aqua;
             }
 
             .piano-keys {
-                width: 3.5rem;
-                cursor: pointer;
-                position: relative;
-                height: 16rem;
-                border-radius: 10px;
-                border: 1px solid #000;
+                height: 8;
+                width: 2.3rem;
             }
 
             .black-key {
-                width: 1.8rem;
-                height: 10rem;
-                border-radius: 5px;
-                border-top-left-radius: 0;
-                border-top-right-radius: 0;
-                background-color: #000;
-                z-index: 2;
-                margin: 0 -20px 0 -20px;
+                height: 5;
+                width: 1rem;
+                margin: 0 -13px 0 -13px;
+            }
+
+            .piano-keys-list{
+                gap:1px;
             }
         }
+
     </style>
 </head>
 
 <body>
     <div class="container">
-        <ul class="piano-keys-list">
-            <li class="piano-keys white-key" data-key="01"></li>
-            <li class="piano-keys black-key" data-key="02"></li>
-            <li class="piano-keys white-key" data-key="03"></li>
-            <li class="piano-keys black-key" data-key="04"></li>
-            <li class="piano-keys white-key" data-key="05"></li>
-            <li class="piano-keys white-key" data-key="06"></li>
-            <li class="piano-keys black-key" data-key="07"></li>
-            <li class="piano-keys white-key" data-key="08"></li>
-            <li class="piano-keys black-key" data-key="09"></li>
-            <li class="piano-keys white-key" data-key="10"></li>
-            <li class="piano-keys black-key" data-key="11"></li>
-            <li class="piano-keys white-key" data-key="12"></li>
-            <li class="piano-keys white-key" data-key="13"></li>
-        </ul>
+        <div class="piano-container">
+            <ul class="piano-keys-list">
+                <li class="piano-keys white-key" data-key="01"></li>
+                <li class="piano-keys black-key" data-key="02"></li>
+                <li class="piano-keys white-key" data-key="03"></li>
+                <li class="piano-keys black-key" data-key="04"></li>
+                <li class="piano-keys white-key" data-key="05"></li>
+                <li class="piano-keys white-key" data-key="06"></li>
+                <li class="piano-keys black-key" data-key="07"></li>
+                <li class="piano-keys white-key" data-key="08"></li>
+                <li class="piano-keys black-key" data-key="09"></li>
+                <li class="piano-keys white-key" data-key="10"></li>
+                <li class="piano-keys black-key" data-key="11"></li>
+                <li class="piano-keys white-key" data-key="12"></li>
+                <li class="piano-keys white-key" data-key="13"></li>
+            </ul>
+        </div>
     </div>
 
     <script>
